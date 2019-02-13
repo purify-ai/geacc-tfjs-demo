@@ -1,0 +1,64 @@
+<!doctype html>
+
+<head>
+  <title>Geacc: Using a pretrained model for explicit image detection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="default.css" />
+</head>
+
+<style>
+  .pred-container {
+    margin-bottom: 20px;
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+
+  #file-container {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <h2>Using Geacc pretrained model and TensorFlow.js to detect explicit images.</h2>
+    <p>
+        This demo uses the pretrained Geacc MobileNetV2 model from Purify.ai which you can find
+        <a href="https://github.com/purify-ai/geacc-models/" target="_blank">here</a>.
+    </p>
+    <p>Once model loaded, you will be able to upload images for classification.</p>
+
+    <div id="file-container" style="display: none">
+      <form>
+        <label for="files">Upload an image:</label>
+        <input type="file" id="files" name="files[]" multiple />
+      </form>
+    </div>
+
+    <table id="predictions">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Prediction</th>
+          <th>Score</th>
+          <th>Filename</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <img style="display: none" id="cat" src="cat.jpg" width=224 height=224 />
+    <script src="index.js"></script>
+  </div>
+</body>
