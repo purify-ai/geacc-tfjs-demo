@@ -1,6 +1,6 @@
 # Geacc TensorFlow.js Demo
 
-This demo app detects explicit images using Geacc pretrained model (MobileNetV2) and TensorFlow.js.
+This demo app detects explicit images using [Geacc pre-trained model](https://github.com/purify-ai/geacc-models/) (MobileNetV2) and TensorFlow.js.
 
 All inference performed in browser. Once initialised, you can start uploading images.
 
